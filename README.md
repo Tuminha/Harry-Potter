@@ -47,13 +47,17 @@
 - Practice feature engineering and data visualization techniques
 
 ### 🏆 Key Achievements
-- [x] Comprehensive EDA with advanced visualizations
-- [x] Target variable creation from engagement metrics
-- [x] Feature engineering with all interaction term types
-- [x] Polynomial term implementation for non-linear relationships
-- [x] Dual modeling approach (StatsModels + scikit-learn)
-- [x] Model comparison and performance evaluation
-- [x] Advanced result visualizations (ROC, feature importance)
+- [x] Comprehensive EDA with advanced visualizations (power-law distributions, scatter matrix, correlation heatmap)
+- [x] Data cleaning and type conversion with robust error handling
+- [x] Binary variable creation from character and story metadata
+- [x] Target variable creation using composite engagement score (75th percentile threshold)
+- [x] Dataset analysis of 648K+ Harry Potter fan fiction stories
+- [x] Identification of strong correlations between engagement metrics (r=0.72-0.89)
+- [x] Power-law distribution analysis revealing typical social media engagement patterns
+- [ ] Feature engineering with interaction and polynomial terms
+- [ ] Dual modeling approach (StatsModels + scikit-learn)
+- [ ] Model comparison and performance evaluation
+- [ ] Advanced result visualizations (ROC, feature importance)
 - [ ] Regularization techniques (L1/L2)
 - [ ] Cross-validation implementation
 - [ ] Feature selection optimization
@@ -115,11 +119,12 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Distribution plots for quantitative variables
-- [x] Count plots for binary categorical variables
-- [x] Scatter plots for key relationships
-- [x] Correlation heatmap analysis
-- [x] Pattern identification and reflection
+- [x] Data cleaning and type conversion (string to numeric with error handling)
+- [x] Distribution plots for quantitative variables (log-scale histograms)
+- [x] Binary variable creation from character data (harry, hermione, ron, draco, multiple, english, humor)
+- [x] Scatter matrix analysis showing relationships between variables
+- [x] Correlation heatmap revealing strong engagement metric correlations
+- [x] Power-law distribution identification and insights
 
 </details>
 
@@ -127,10 +132,11 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Explore engagement metrics distributions
-- [x] Create binary popularity indicator
-- [x] Check target variable balance
-- [x] Define popularity threshold strategy
+- [x] Created composite engagement score (total_engagement = favorites + follows + reviews)
+- [x] Defined binary popularity indicator using 75th percentile threshold
+- [x] Achieved good class balance (18% popular, 82% not popular)
+- [x] Visualized target variable distribution with histogram
+- [x] Ready for feature engineering phase
 
 </details>
 
@@ -221,7 +227,27 @@ Final Model Performance (Threshold: 0.5):
 ### 🖼 Visuals
 <div align="center">
 
-*Visualizations will be generated during the analysis and stored in the `images/` directory*
+<img src="images/distribution_histograms.png" alt="Distribution of Quantitative Variables" width="680" />
+
+*Power-law distributions of engagement metrics and story length*
+
+<br /><br />
+
+<img src="images/Scatter Matrix of Quantitative Variables.png" alt="Scatter Matrix Analysis" width="680" />
+
+*Relationships between quantitative variables showing strong engagement correlations*
+
+<br /><br />
+
+<img src="images/Correlation Heatmap of Quantitative Variables.png" alt="Correlation Heatmap" width="680" />
+
+*Correlation analysis revealing strong relationships between engagement metrics*
+
+<br /><br />
+
+<img src="images/Distribution of Binary Variables in Harry Potter Fan Fiction.png" alt="Binary Variables Distribution" width="680" />
+
+*Distribution of character presence and story characteristics*
 
 </div>
 
