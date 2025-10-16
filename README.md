@@ -56,7 +56,8 @@
 - [x] Power-law distribution analysis revealing typical social media engagement patterns
 - [x] **CRITICAL INSIGHT**: Data leakage detection and resolution (unrealistic 86.5% R² → realistic 30.1% R²)
 - [x] Comprehensive feature engineering with interaction terms (Binary×Quantitative, Quantitative×Quantitative, Binary×Binary)
-- [x] Polynomial terms implementation (quadratic relationships)
+- [x] **VISUAL DATA LEAKAGE EVIDENCE**: Created comparative plots demonstrating perfect separation in engagement metrics
+- [x] Polynomial terms implementation with non-linear relationship analysis
 - [x] Clean model building with StatsModels (no data leakage)
 - [x] Professional-level model interpretation and coefficient analysis
 - [ ] Dual modeling approach (StatsModels + scikit-learn comparison)
@@ -164,9 +165,12 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Quadratic terms for all quantitative variables
-- [x] Non-linear relationship visualization
-- [x] Polynomial term significance analysis
+- [x] **Critical Data Leakage Visualization**: Created comparative plots showing original vs squared relationships
+- [x] **Visual Evidence of Data Leakage**: Bottom plots show near-perfect separation for engagement metrics (log_favs vs is_popular)
+- [x] **Legitimate Feature Validation**: Top plots demonstrate realistic correlation between log_words and popularity
+- [x] **Quadratic Terms Implementation**: log_words_squared, log_favs_squared, log_follows_squared, log_reviews_squared
+- [x] **Non-linear Relationship Analysis**: Side-by-side comparison of original vs squared variable relationships
+- [x] **Professional Visualization Skills**: 2x2 subplot layout with proper sampling for performance
 
 </details>
 
@@ -261,6 +265,12 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <img src="images/Distribution of Binary Variables in Harry Potter Fan Fiction.png" alt="Binary Variables Distribution" width="680" />
 
 *Distribution of character presence and story characteristics*
+
+<br /><br />
+
+<img src="images/scatter logs vs original.png" alt="Original vs Squared Variable Relationships" width="680" />
+
+*Critical visualization showing original vs squared relationships - bottom plots demonstrate data leakage with engagement metrics*
 
 </div>
 
