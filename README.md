@@ -14,7 +14,7 @@
 
 </div>
 
-> First comprehensive analysis: Exploring complex relationships in fan fiction popularity — building advanced logistic regression models with interaction and polynomial terms. Next up: regularization and feature selection techniques.
+> Advanced logistic regression analysis: Successfully implemented interaction terms, polynomial features, and data leakage detection. Next up: model comparison, statistical analysis, and scikit-learn evaluation.
 
 ---
 
@@ -174,14 +174,15 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 
 </details>
 
-### Phase 7: Model Building with StatsModels ✅
+### Phase 7: Model Building with StatsModels 🔄
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Feature matrix preparation
-- [x] Constant term addition
-- [x] Logistic regression model fitting
-- [x] Detailed statistical output interpretation
+- [ ] Model comparison (Baseline vs Interaction vs Polynomial vs Comprehensive)
+- [ ] Statistical significance analysis and feature importance ranking
+- [ ] Model selection using AIC, BIC, and Pseudo R² metrics
+- [ ] Diagnostic analysis and model validation
+- [ ] Detailed statistical output interpretation and comparison
 
 </details>
 
@@ -294,11 +295,14 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 ---
 
 ## 🚀 Next Steps
+- [ ] **Phase 7**: Model comparison and statistical analysis (Baseline vs Interaction vs Polynomial models)
+- [ ] **Phase 8**: scikit-learn implementation and evaluation metrics
+- [ ] **Phase 9**: Advanced model comparison and feature importance analysis
+- [ ] **Phase 10**: Result visualizations (ROC curves, confusion matrix, feature importance plots)
+- [ ] **Phase 11**: Conclusion and reflection on key learnings
 - [ ] Implement regularization techniques (L1/L2) to prevent overfitting
 - [ ] Add cross-validation for more robust performance estimates
-- [ ] Explore feature selection methods (Recursive Feature Elimination)
 - [ ] Compare with other algorithms (Random Forest, XGBoost)
-- [ ] Deploy model as a web application for story popularity prediction
 
 ---
 
