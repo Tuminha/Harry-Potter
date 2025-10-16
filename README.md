@@ -54,8 +54,12 @@
 - [x] Dataset analysis of 648K+ Harry Potter fan fiction stories
 - [x] Identification of strong correlations between engagement metrics (r=0.72-0.89)
 - [x] Power-law distribution analysis revealing typical social media engagement patterns
-- [ ] Feature engineering with interaction and polynomial terms
-- [ ] Dual modeling approach (StatsModels + scikit-learn)
+- [x] **CRITICAL INSIGHT**: Data leakage detection and resolution (unrealistic 86.5% R² → realistic 30.1% R²)
+- [x] Comprehensive feature engineering with interaction terms (Binary×Quantitative, Quantitative×Quantitative, Binary×Binary)
+- [x] Polynomial terms implementation (quadratic relationships)
+- [x] Clean model building with StatsModels (no data leakage)
+- [x] Professional-level model interpretation and coefficient analysis
+- [ ] Dual modeling approach (StatsModels + scikit-learn comparison)
 - [ ] Model comparison and performance evaluation
 - [ ] Advanced result visualizations (ROC, feature importance)
 - [ ] Regularization techniques (L1/L2)
@@ -144,10 +148,15 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Binary × Quantitative interactions (harry×words, hermione×reviews, etc.)
-- [x] Quantitative × Quantitative interactions (words×reviews, favorites×follows, etc.)
-- [x] Binary × Binary interactions (harry×hermione, multiple×english, etc.)
-- [x] Interaction term interpretation and significance
+- [x] **Data Leakage Discovery**: Identified unrealistic 86.5% R² due to using engagement metrics as features
+- [x] **Clean Model Building**: Removed engagement metrics, achieved realistic 30.1% R²
+- [x] Binary × Quantitative interactions (harry×words, hermione×reviews, humor×log_words, etc.)
+- [x] Quantitative × Quantitative interactions (log_words×log_favs, log_words×log_reviews)
+- [x] Binary × Binary interactions (harry×hermione, harry×draco, ron×hermione)
+- [x] Polynomial terms (log_words_squared, log_favs_squared)
+- [x] Comprehensive model with 9 features and proper statistical significance
+- [x] Professional coefficient interpretation (Harry: 362% more likely, Hermione: 305% more likely)
+- [x] Model prediction testing on new story features
 
 </details>
 
@@ -211,18 +220,22 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 ---
 
 ## 🏆 Results
-Final Model Performance (Threshold: 0.5):
-├── Accuracy: [To be filled during analysis]
-├── ROC-AUC: [To be filled during analysis]
-├── Precision: [To be filled during analysis]
-├── Recall: [To be filled during analysis]
-├── F1-Score: [To be filled during analysis]
-└── Confusion Matrix: [To be filled during analysis]
+**Clean Model Performance (No Data Leakage):**
+├── Pseudo R²: 0.3014 (30.1% variance explained)
+├── Log-Likelihood: -60,492
+├── Model Convergence: Successful (6 iterations)
+├── Statistical Significance: All key features p < 0.05
+└── Sample Size: 126,727 observations
 
 ### 📌 Business Interpretation
-- **Most Important Features:** [To be identified during analysis]
-- **Key Interactions:** [To be discovered during analysis]
-- **Popularity Drivers:** [To be determined during analysis]
+- **Most Important Features:** Story length (log_words), Harry presence, Hermione presence
+- **Key Insights:** 
+  - Harry stories are 362% more likely to be popular
+  - Hermione stories are 305% more likely to be popular
+  - Ron stories are 50% less likely to be popular
+  - Multi-chapter stories are 67% less likely to be popular
+- **Critical Discovery:** Data leakage detection prevented unrealistic model performance
+- **Popularity Drivers:** Character presence (Harry/Hermione), story length, single-chapter format
 
 ### 🖼 Visuals
 <div align="center">
