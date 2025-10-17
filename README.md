@@ -221,10 +221,10 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <summary><strong>Details</strong></summary>
 
 - [x] ROC curve and AUC calculation (completed in Phase 8)
+- [x] Confusion matrix heatmap with annotations (76% accuracy breakdown)
+- [x] Model comparison visualizations (StatsModels vs scikit-learn)
 - [ ] Predicted probabilities distribution analysis
 - [ ] Feature importance visualization (coefficient plots)
-- [ ] Confusion matrix heatmap with annotations
-- [ ] Model comparison visualizations (StatsModels vs scikit-learn)
 
 </details>
 
@@ -296,6 +296,18 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <img src="images/ROC_Curve.png" alt="ROC Curve Analysis" width="680" />
 
 *ROC curve showing excellent model performance with AUC = 0.83 - strong discriminative power for predicting story popularity*
+
+<br /><br />
+
+<img src="images/stats model vs sklearn model.png" alt="StatsModels vs Scikit-learn Model Comparison" width="680" />
+
+*Model comparison visualization highlighting the critical difference in feature engineering between StatsModels and scikit-learn approaches*
+
+<br /><br />
+
+<img src="images/confusion_matrix.png" alt="Confusion Matrix Analysis" width="680" />
+
+*Confusion matrix showing model performance breakdown: 76% accuracy with 11,557 True Negatives, 7,158 True Positives, 2,570 False Positives, and 3,374 False Negatives*
 
 </div>
 
