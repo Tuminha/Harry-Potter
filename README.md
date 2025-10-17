@@ -60,7 +60,8 @@
 - [x] **MODEL COMPARISON ANALYSIS**: Comprehensive evaluation of Baseline vs Interaction vs Polynomial models
 - [x] **PRODUCTION-READY MODEL**: scikit-learn implementation with 76% accuracy and 0.83 AUC
 - [x] **COMPREHENSIVE EVALUATION**: ROC curves, confusion matrix, precision/recall analysis
-- [x] **BUSINESS INSIGHTS**: Character presence (Harry/Hermione) more important than story structure
+- [x] **CRITICAL LESSON LEARNED**: StatsModels vs scikit-learn feature engineering differences (interaction terms)
+- [x] **BUSINESS INSIGHTS**: Character combination effects (Harry+Hermione less popular than expected)
 - [ ] Dual modeling approach (StatsModels + scikit-learn comparison)
 - [ ] Model comparison and performance evaluation
 - [ ] Advanced result visualizations (ROC, feature importance)
@@ -206,21 +207,24 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] Baseline model (original features only)
-- [x] Full model performance comparison
-- [x] Most significant interaction/polynomial terms identification
-- [x] Feature importance analysis
+- [x] **Comprehensive Model Analysis**: Detailed comparison of StatsModels vs scikit-learn approaches
+- [x] **Feature Importance Ranking**: Identified most significant terms by coefficient magnitude
+- [x] **Critical Discovery**: Missing interaction terms in scikit-learn model (harry:hermione effect)
+- [x] **Business Insights**: Character combination effects (Harry+Hermione less popular than expected)
+- [x] **Statistical Significance**: All key features p < 0.05 in StatsModels
+- [x] **Model Completeness**: StatsModels includes interactions automatically, scikit-learn requires manual feature engineering
 
 </details>
 
-### Phase 10: Visualization of Results ✅
+### Phase 10: Visualization of Results 🔄
 <details>
 <summary><strong>Details</strong></summary>
 
-- [x] ROC curve and AUC calculation
-- [x] Predicted probabilities distribution
-- [x] Feature importance visualization
-- [x] Confusion matrix heatmap
+- [x] ROC curve and AUC calculation (completed in Phase 8)
+- [ ] Predicted probabilities distribution analysis
+- [ ] Feature importance visualization (coefficient plots)
+- [ ] Confusion matrix heatmap with annotations
+- [ ] Model comparison visualizations (StatsModels vs scikit-learn)
 
 </details>
 
@@ -248,6 +252,13 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
   - Multi-chapter stories are 67% less likely to be popular
 - **Critical Discovery:** Data leakage detection prevented unrealistic model performance
 - **Popularity Drivers:** Character presence (Harry/Hermione), story length, single-chapter format
+
+### 🎓 Key Lesson Learned: StatsModels vs scikit-learn Feature Engineering
+- **StatsModels**: Automatically includes interaction terms in formula-based models
+- **scikit-learn**: Requires manual feature engineering for interaction terms
+- **Impact**: Missing `harry:hermione` interaction (-1.37 coefficient) in scikit-learn model
+- **Business Insight**: Character combinations matter - Harry+Hermione stories are less popular than expected
+- **Best Practice**: Always ensure feature parity between statistical and ML models
 
 ### 🖼 Visuals
 <div align="center">
@@ -308,14 +319,12 @@ jupyter notebook notebooks/harry_potter_logistic_regression.ipynb
 ---
 
 ## 🚀 Next Steps
-- [ ] **Phase 7**: Model comparison and statistical analysis (Baseline vs Interaction vs Polynomial models)
-- [ ] **Phase 8**: scikit-learn implementation and evaluation metrics
-- [ ] **Phase 9**: Advanced model comparison and feature importance analysis
-- [ ] **Phase 10**: Result visualizations (ROC curves, confusion matrix, feature importance plots)
-- [ ] **Phase 11**: Conclusion and reflection on key learnings
+- [ ] **Phase 10**: Advanced result visualizations (feature importance plots, confusion matrix heatmap, model comparison charts)
+- [ ] **Phase 11**: Conclusion and reflection on key learnings and insights
 - [ ] Implement regularization techniques (L1/L2) to prevent overfitting
 - [ ] Add cross-validation for more robust performance estimates
 - [ ] Compare with other algorithms (Random Forest, XGBoost)
+- [ ] Deploy model as a web application for story popularity prediction
 
 ---
 
